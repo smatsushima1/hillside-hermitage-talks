@@ -2,6 +2,7 @@
 Archive of Hillside Hermitage's transcribed talks.
 
 | COMPLETED | NAME |
+| --- | --- |
 |  | 00001_can_love_be_a_path_to_happiness |
 |  | 00002_why_is_celibacy_important |
 |  | 00003_how_to_overcome_the_attachments |
