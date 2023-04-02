@@ -1,6 +1,3 @@
-# hillside-hermitage-talks
-Archive of Hillside Hermitage's transcribed talks.
-
 COMPLETED | NAME
  | 00001_can_love_be_a_path_to_happiness
  | 00002_why_is_celibacy_important
@@ -71,7 +68,7 @@ X | 00064_responsibility_can_free_you_from_suffering
  | 00067_comprehending_the_mindfulness_of_breathing
  | 00068_ajahn_chahs_die_before_you_die
  | 00069_audio_on_ajahn_chahs_still_flowing_water
-X | 00070_the_stream-entry_of_ajahn_chah
+ | 00070_the_stream-entry_of_ajahn_chah
  | 00071_ajahn_chah_and_the_original_mind
  | 00072_qa_seeing_the_symptoms_of_your_mind
  | 00073_solitude_amplifies_the_mind
@@ -152,7 +149,7 @@ X | 00131_even_being_a_layman_does_not_justify_your_sensuality
  | 00147_from_a_layman_to_an_arahant
  | 00148_metta_sutta_can_make_you_an_arahant
  | 00149_dont_wait_until_its_too_late_nzhobo9i9_8
-X | 00150_sense_pleasures_make_you_an_addict
+ | 00150_sense_pleasures_make_you_an_addict
  | 00151_time_to_face_your_feelings_anger_and_sensuality_03mvq5dhm4
  | 00152_craving_the_end_of_craving;_consciousness_and_knowing_the_senses_vksghzxaauc
  | 00153_the_diversity_of_sensual_desires_and_pressure_0sds6bo4sya
@@ -170,24 +167,24 @@ X | 00155_you_dont_need_to_say_no_to_everything_cqjlizzsmam
  | 00165_detailed_analysis_of_the_fire_sermon
  | 00166_how_to_overcome_things_that_bother_you
  | 00167_the_useful_anxiety_sutta_study
-X | 00168_looking_for_a_bigger_picture_importance_of_precepts
-X | 00169_the_context_of_your_suffering
+ | 00168_looking_for_a_bigger_picture_importance_of_precepts
+ | 00169_the_context_of_your_suffering
 X | 00170_qa_how_to_develop_the_attitude_of_solitude
-X | 00171_beautiful_side_of_ugly_living_side_of_death
+ | 00171_beautiful_side_of_ugly_living_side_of_death
  | 00172_9_things_you_should_be_incapable_of
-X | 00173_seeing_dukkha_in_anicca_not_delighting_in_the_whole_world_-part_2
+ | 00173_seeing_dukkha_in_anicca_not_delighting_in_the_whole_world_-part_2
  | 00174_undefiled_by_the_defilements
  | 00175_let_only_bones_and_sinews_remain
-X | 00176_emotionally_undisturbed
+ | 00176_emotionally_undisturbed
  | 00177_angry_loving-kindness
  | 00178_how_to_train_gradually
  | 00179_vipers_murderers_and_intimate_friends
-X | 00180_on_suttas_right_way_of_striving
+ | 00180_on_suttas_right_way_of_striving
  | 00181_how_to_sustain_your_mindfulness
  | 00182_death_of_your_personality
-X | 00183_becoming_an_immovable_object
+ | 00183_becoming_an_immovable_object
  | 00184_is_your_dhamma_abstract_or_practical
-X | 00185_samsara_is_directly_visible_practical_contemplation
+ | 00185_samsara_is_directly_visible_practical_contemplation
  | 00186_like_a_blind_or_a_deaf_man
  | 00187_qa_criteria_for_choosing_a_teacher
  | 00188_qa_is_forgiveness_necessary
