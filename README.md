@@ -160,7 +160,7 @@ Archive of Hillside Hermitage's transcribed talks.
 |  | 00154_abandoning_of_sensuality_is_what_meditation_is |
 | X | 00155_you_dont_need_to_say_no_to_everything_cqjlizzsmam |
 |  | 00156_stop_thinking_that_you_can_stop_thinking_bsv9jlmh4e8 |
-|  | 00157_are_you_hunted_down_by_your_own_emotions |
+| X | 00157_are_you_hunted_down_by_your_own_emotions |
 |  | 00158_timeless_dhamma_n_shj1ecvuu |
 |  | 00159_not_blaming_the_circumstances |
 |  | 00160_the_five_knowledges_of_the_limitless_samadhi_y8jzucq990o |
@@ -201,21 +201,21 @@ Archive of Hillside Hermitage's transcribed talks.
 |  | 00195_wise_attention_misunderstanding_of_yoniso_manasikara |
 |  | 00196_scratching_the_itch |
 |  | 00197_can_a_layman_be_an_arahant |
-|  | 00198_in_the_seen_just_the_seen |
-|  | 00199_the_uprooting_of_your_suffering |
+| X | 00198_in_the_seen_just_the_seen |
+| X | 00199_the_uprooting_of_your_suffering |
 | X | 00200_gateway_to_nibbana |
 |  | 00201_on_peripheral_awareness_uprooting_of_anger_dealing_with_displeasure |
-|  | 00202_nibbana_is_the_ultimate_uncertainty |
+| X | 00202_nibbana_is_the_ultimate_uncertainty |
 | X | 00203_the_truth_about_the_five_hindrances |
-|  | 00204_the_six_sensed_animal |
+| X | 00204_the_six_sensed_animal |
 | X | 00205_jhana_is_a_lifestyle |
-|  | 00206_pleasure_of_non-activity |
+| X | 00206_pleasure_of_non-activity |
 |  | 00207_the_danger_contemplation |
 |  | 00208_developed_in_the_body_and_the_mind |
 | X | 00209_the_simile_of_the_wet_sticks |
-|  | 00210_how_to_let_go |
+| X | 00210_how_to_let_go |
 |  | 00211_the_pain_of_doubt |
-|  | 00212_how_to_be_happy |
+| X | 00212_how_to_be_happy |
 | X | 00213_how_to_calm_your_mind |
 |  | 00214_qa_on_jhana_anxiety_precepts |
 | X | 00215_mindfulness_of_breathing_and_calming_of_aversion |
@@ -226,7 +226,7 @@ Archive of Hillside Hermitage's transcribed talks.
 |  | 00220_the_pressure_of_sensuality |
 |  | 00221_accomplished_in_virtue |
 |  | 00222_putting_the_body_first |
-|  | 00223_practice_of_generosity |
+| X | 00223_practice_of_generosity |
 |  | 00224_practical_impermanence |
 |  | 00225_no_joy_no_misery |
 |  | 00226_citta_vs_dhamma_wrong_views_and_types_of_dukkha |
@@ -259,9 +259,9 @@ Archive of Hillside Hermitage's transcribed talks.
 |  | 00253_perception_of_anicca |
 |  | 00254_perception_of_dispassion |
 |  | 00255_metta_goenka_death_and_samadhi |
-|  | 00256_seven_factors_of_enlightenment |
-|  | 00257_only_the_noble_truth_of_pain |
-|  | 00258_simile_of_the_sons_flesh |
+| X | 00256_seven_factors_of_enlightenment |
+| X | 00257_only_the_noble_truth_of_pain |
+| X | 00258_simile_of_the_sons_flesh |
 |  | 00259_four_kinds_of_loss |
 |  | 00260_qa_on_war_precepts_contemporary_meditations_and_right_calmness |
 |  | 00261_danger_and_escape |
@@ -287,7 +287,7 @@ Archive of Hillside Hermitage's transcribed talks.
 |  | 00281_abundant_theory_lack_of_endurance |
 |  | 00282_group_interrogation_on_everything |
 |  | 00283_death_uncertainty_and_aversion_to_pain |
-|  | 00284_the_meaning_of_right_samadhi |
+| X | 00284_the_meaning_of_right_samadhi |
 |  | 00285_the_extent_of_the_danger |
 |  | 00286_the_mind_cleansing_method |
 |  | 00287_how_to_abandon_the_self_view |
