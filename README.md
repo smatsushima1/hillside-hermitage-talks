@@ -210,7 +210,7 @@ Archive of Hillside Hermitage's transcribed talks.
 | X | 00204_the_six_sensed_animal |
 | X | 00205_jhana_is_a_lifestyle |
 | X | 00206_pleasure_of_non-activity |
-|  | 00207_the_danger_contemplation |
+| X | 00207_the_danger_contemplation |
 |  | 00208_developed_in_the_body_and_the_mind |
 | X | 00209_the_simile_of_the_wet_sticks |
 | X | 00210_how_to_let_go |
