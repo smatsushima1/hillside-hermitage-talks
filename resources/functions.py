@@ -49,9 +49,15 @@ def scrape_hh():
         list_name.append(i['title']['runs'][0]['text'])
         list_link.append(ylink)
         # Start API search
-        access_token = ''
-        url_search = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=' + yid + '&key=' + access_token
-        response = requests.get(url_search)
+        # https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=[YID]&key=[ACCESS_KEY]
+        # %2C = ,
+        # OLD: url_search = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=' + yid + '&key=' + access_token
+        url_search = 'https://youtube.googleapis.com/youtube/v3/videos?'
+        url_parameters = {'part': 'snippet,contentDetails,statistics',
+                          'id': yid,
+                          'key': ''
+                         }
+        response = requests.get(url_search, params = url_parameters)
         # Parse date, convert, then append to list; must be converted to json first
         dtime = response.json()['items'][0]['snippet']['publishedAt']
         updated_dtime = datetime.strptime(dtime[:10], '%Y-%m-%d')
@@ -113,6 +119,7 @@ def number_check():
 #number_check()
 
 
+################################################################################
 # Sample output of youtube api data:
 # print(json.dumps(response.json(), indent = 2))
 # {
@@ -225,6 +232,7 @@ def number_check():
 # }
 #
 #
+################################################################################
 # Sample output from scrapetube
 # {
 #   "videoId": "eJmutiITt6E",
