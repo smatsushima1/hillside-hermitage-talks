@@ -28,7 +28,6 @@ def scrape_hh():
     # Save completed talk data to be referenced later
     cdf = pd.read_csv('completed_results.csv')    
     for i in videos:
-        # print(json.dumps(i, indent = 2))
         print('Working: ' + i['title']['runs'][0]['text'])
         # Save video ID
         yid = i['videoId']
@@ -111,7 +110,7 @@ def number_check():
 #create_txt_files()
 #scrape_hh()
 #get_urls()
-#dev003()
+#number_check()
 
 
 # Sample output of youtube api data:
@@ -222,5 +221,388 @@ def number_check():
 #   "pageInfo": {
 #     "totalResults": 1,
 #     "resultsPerPage": 1
+#   }
+# }
+#
+#
+# Sample output from scrapetube
+# {
+#   "videoId": "eJmutiITt6E",
+#   "thumbnail": {
+#     "thumbnails": [
+#       {
+#         "url": "https://i.ytimg.com/vi/eJmutiITt6E/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDYok_meCp1deQnsE29i0Y2rr58Ow",
+#         "width": 168,
+#         "height": 94
+#       },
+#       {
+#         "url": "https://i.ytimg.com/vi/eJmutiITt6E/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD7IhqEya7B2DoyfqvhbJb5Ms01VA",
+#         "width": 196,
+#         "height": 110
+#       },
+#       {
+#         "url": "https://i.ytimg.com/vi/eJmutiITt6E/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCTKvvJOtYIZc1JCfzmSk1FhS4U-Q",
+#         "width": 246,
+#         "height": 138
+#       },
+#       {
+#         "url": "https://i.ytimg.com/vi/eJmutiITt6E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDYn-LPhc6KW8eZw5LS0yHTKO2l-g",
+#         "width": 336,
+#         "height": 188
+#       }
+#     ]
+#   },
+#   "title": {
+#     "runs": [
+#       {
+#         "text": "When To Go Into Seclusion?"
+#       }
+#     ],
+#     "accessibility": {
+#       "accessibilityData": {
+#         "label": "When To Go Into Seclusion? by Hillside Hermitage 1 day ago 13 minutes, 39 seconds 873 views"
+#       }
+#     }
+#   },
+#   "descriptionSnippet": {
+#     "runs": [
+#       {
+#         "text": "Skilful seclusion vs the unskilful one.\n ____________________________________\nIf you wish to support the monks of the Hillside Hermitage Sangha and this channel you are very welcome to do so..."
+#       }
+#     ]
+#   },
+#   "publishedTimeText": {
+#     "simpleText": "1 day ago"
+#   },
+#   "lengthText": {
+#     "accessibility": {
+#       "accessibilityData": {
+#         "label": "13 minutes, 39 seconds"
+#       }
+#     },
+#     "simpleText": "13:39"
+#   },
+#   "viewCountText": {
+#     "simpleText": "873 views"
+#   },
+#   "navigationEndpoint": {
+#     "clickTrackingParams": "COgBENwwIhMI_IKxubeV_gIVo4_lBx1g9wWsWhhVQ0tlam1XQXRfa05wUk1xNWdRRUdBcXeaAQYQ8jgY4AeqARpVVUxGS2VqbVdBdF9rTnBSTXE1Z1FFR0Fxdw==",
+#     "commandMetadata": {
+#       "webCommandMetadata": {
+#         "url": "/watch?v=eJmutiITt6E",
+#         "webPageType": "WEB_PAGE_TYPE_WATCH",
+#         "rootVe": 3832
+#       }
+#     },
+#     "watchEndpoint": {
+#       "videoId": "eJmutiITt6E",
+#       "watchEndpointSupportedOnesieConfig": {
+#         "html5PlaybackOnesieConfig": {
+#           "commonConfig": {
+#             "url": "https://rr4---sn-q4flrne6.googlevideo.com/initplayback?source=youtube&oeis=1&c=WEB&oad=3200&ovd=3200&oaad=11000&oavd=11000&ocs=700&oewis=1&oputc=1&ofpcc=1&msp=1&odepv=1&id=7899aeb62213b7a1&ip=98.200.221.194&initcwndbps=1687500&mt=1680789911&oweuc="
+#           }
+#         }
+#       }
+#     }
+#   },
+#   "trackingParams": "COgBENwwIhMI_IKxubeV_gIVo4_lBx1g9wWsQKHvzpDi1uvMeKoBGlVVTEZLZWptV0F0X2tOcFJNcTVnUUVHQXF3",
+#   "showActionMenu": false,
+#   "shortViewCountText": {
+#     "accessibility": {
+#       "accessibilityData": {
+#         "label": "873 views"
+#       }
+#     },
+#     "simpleText": "873 views"
+#   },
+#   "menu": {
+#     "menuRenderer": {
+#       "items": [
+#         {
+#           "menuServiceItemRenderer": {
+#             "text": {
+#               "runs": [
+#                 {
+#                   "text": "Add to queue"
+#                 }
+#               ]
+#             },
+#             "icon": {
+#               "iconType": "ADD_TO_QUEUE_TAIL"
+#             },
+#             "serviceEndpoint": {
+#               "clickTrackingParams": "CO0BEP6YBBgGIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#               "commandMetadata": {
+#                 "webCommandMetadata": {
+#                   "sendPost": true
+#                 }
+#               },
+#               "signalServiceEndpoint": {
+#                 "signal": "CLIENT_SIGNAL",
+#                 "actions": [
+#                   {
+#                     "clickTrackingParams": "CO0BEP6YBBgGIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#                     "addToPlaylistCommand": {
+#                       "openMiniplayer": true,
+#                       "videoId": "eJmutiITt6E",
+#                       "listType": "PLAYLIST_EDIT_LIST_TYPE_QUEUE",        
+#                       "onCreateListCommand": {
+#                         "clickTrackingParams": "CO0BEP6YBBgGIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#                         "commandMetadata": {
+#                           "webCommandMetadata": {
+#                             "sendPost": true,
+#                             "apiUrl": "/youtubei/v1/playlist/create"      
+#                           }
+#                         },
+#                         "createPlaylistServiceEndpoint": {
+#                           "videoIds": [
+#                             "eJmutiITt6E"
+#                           ],
+#                           "params": "CAQ%3D"
+#                         }
+#                       },
+#                       "videoIds": [
+#                         "eJmutiITt6E"
+#                       ]
+#                     }
+#                   }
+#                 ]
+#               }
+#             },
+#             "trackingParams": "CO0BEP6YBBgGIhMI_IKxubeV_gIVo4_lBx1g9wWs"  
+#           }
+#         },
+#         {
+#           "menuServiceItemDownloadRenderer": {
+#             "serviceEndpoint": {
+#               "clickTrackingParams": "COwBENGqBRgHIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#               "offlineVideoEndpoint": {
+#                 "videoId": "eJmutiITt6E",
+#                 "onAddCommand": {
+#                   "clickTrackingParams": "COwBENGqBRgHIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#                   "getDownloadActionCommand": {
+#                     "videoId": "eJmutiITt6E",
+#                     "params": "CAI%3D"
+#                   }
+#                 }
+#               }
+#             },
+#             "trackingParams": "COwBENGqBRgHIhMI_IKxubeV_gIVo4_lBx1g9wWs"  
+#           }
+#         },
+#         {
+#           "menuServiceItemRenderer": {
+#             "text": {
+#               "runs": [
+#                 {
+#                   "text": "Share"
+#                 }
+#               ]
+#             },
+#             "icon": {
+#               "iconType": "SHARE"
+#             },
+#             "serviceEndpoint": {
+#               "clickTrackingParams": "COgBENwwIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#               "commandMetadata": {
+#                 "webCommandMetadata": {
+#                   "sendPost": true,
+#                   "apiUrl": "/youtubei/v1/share/get_share_panel"
+#                 }
+#               },
+#               "shareEntityServiceEndpoint": {
+#                 "serializedShareEntity": "CgtlSm11dGlJVHQ2RQ%3D%3D",      
+#                 "commands": [
+#                   {
+#                     "clickTrackingParams": "COgBENwwIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#                     "openPopupAction": {
+#                       "popup": {
+#                         "unifiedSharePanelRenderer": {
+#                           "trackingParams": "COsBEI5iIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#                           "showLoadingSpinner": true
+#                         }
+#                       },
+#                       "popupType": "DIALOG",
+#                       "beReused": true
+#                     }
+#                   }
+#                 ]
+#               }
+#             },
+#             "trackingParams": "COgBENwwIhMI_IKxubeV_gIVo4_lBx1g9wWs"      
+#           }
+#         }
+#       ],
+#       "trackingParams": "COgBENwwIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#       "accessibility": {
+#         "accessibilityData": {
+#           "label": "Action menu"
+#         }
+#       }
+#     }
+#   },
+#   "thumbnailOverlays": [
+#     {
+#       "thumbnailOverlayTimeStatusRenderer": {
+#         "text": {
+#           "accessibility": {
+#             "accessibilityData": {
+#               "label": "13 minutes, 39 seconds"
+#             }
+#           },
+#           "simpleText": "13:39"
+#         },
+#         "style": "DEFAULT"
+#       }
+#     },
+#     {
+#       "thumbnailOverlayToggleButtonRenderer": {
+#         "isToggled": false,
+#         "untoggledIcon": {
+#           "iconType": "WATCH_LATER"
+#         },
+#         "toggledIcon": {
+#           "iconType": "CHECK"
+#         },
+#         "untoggledTooltip": "Watch later",
+#         "toggledTooltip": "Added",
+#         "untoggledServiceEndpoint": {
+#           "clickTrackingParams": "COoBEPnnAxgBIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#           "commandMetadata": {
+#             "webCommandMetadata": {
+#               "sendPost": true,
+#               "apiUrl": "/youtubei/v1/browse/edit_playlist"
+#             }
+#           },
+#           "playlistEditEndpoint": {
+#             "playlistId": "WL",
+#             "actions": [
+#               {
+#                 "addedVideoId": "eJmutiITt6E",
+#                 "action": "ACTION_ADD_VIDEO"
+#               }
+#             ]
+#           }
+#         },
+#         "toggledServiceEndpoint": {
+#           "clickTrackingParams": "COoBEPnnAxgBIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#           "commandMetadata": {
+#             "webCommandMetadata": {
+#               "sendPost": true,
+#               "apiUrl": "/youtubei/v1/browse/edit_playlist"
+#             }
+#           },
+#           "playlistEditEndpoint": {
+#             "playlistId": "WL",
+#             "actions": [
+#               {
+#                 "action": "ACTION_REMOVE_VIDEO_BY_VIDEO_ID",
+#                 "removedVideoId": "eJmutiITt6E"
+#               }
+#             ]
+#           }
+#         },
+#         "untoggledAccessibility": {
+#           "accessibilityData": {
+#             "label": "Watch later"
+#           }
+#         },
+#         "toggledAccessibility": {
+#           "accessibilityData": {
+#             "label": "Added"
+#           }
+#         },
+#         "trackingParams": "COoBEPnnAxgBIhMI_IKxubeV_gIVo4_lBx1g9wWs"      
+#       }
+#     },
+#     {
+#       "thumbnailOverlayToggleButtonRenderer": {
+#         "untoggledIcon": {
+#           "iconType": "ADD_TO_QUEUE_TAIL"
+#         },
+#         "toggledIcon": {
+#           "iconType": "PLAYLIST_ADD_CHECK"
+#         },
+#         "untoggledTooltip": "Add to queue",
+#         "toggledTooltip": "Added",
+#         "untoggledServiceEndpoint": {
+#           "clickTrackingParams": "COkBEMfsBBgCIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#           "commandMetadata": {
+#             "webCommandMetadata": {
+#               "sendPost": true
+#             }
+#           },
+#           "signalServiceEndpoint": {
+#             "signal": "CLIENT_SIGNAL",
+#             "actions": [
+#               {
+#                 "clickTrackingParams": "COkBEMfsBBgCIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#                 "addToPlaylistCommand": {
+#                   "openMiniplayer": true,
+#                   "videoId": "eJmutiITt6E",
+#                   "listType": "PLAYLIST_EDIT_LIST_TYPE_QUEUE",
+#                   "onCreateListCommand": {
+#                     "clickTrackingParams": "COkBEMfsBBgCIhMI_IKxubeV_gIVo4_lBx1g9wWs",
+#                     "commandMetadata": {
+#                       "webCommandMetadata": {
+#                         "sendPost": true,
+#                         "apiUrl": "/youtubei/v1/playlist/create"
+#                       }
+#                     },
+#                     "createPlaylistServiceEndpoint": {
+#                       "videoIds": [
+#                         "eJmutiITt6E"
+#                       ],
+#                       "params": "CAQ%3D"
+#                     }
+#                   },
+#                   "videoIds": [
+#                     "eJmutiITt6E"
+#                   ]
+#                 }
+#               }
+#             ]
+#           }
+#         },
+#         "untoggledAccessibility": {
+#           "accessibilityData": {
+#             "label": "Add to queue"
+#           }
+#         },
+#         "toggledAccessibility": {
+#           "accessibilityData": {
+#             "label": "Added"
+#           }
+#         },
+#         "trackingParams": "COkBEMfsBBgCIhMI_IKxubeV_gIVo4_lBx1g9wWs"      
+#       }
+#     },
+#     {
+#       "thumbnailOverlayNowPlayingRenderer": {
+#         "text": {
+#           "runs": [
+#             {
+#               "text": "Now playing"
+#             }
+#           ]
+#         }
+#       }
+#     }
+#   ],
+#   "richThumbnail": {
+#     "movingThumbnailRenderer": {
+#       "movingThumbnailDetails": {
+#         "thumbnails": [
+#           {
+#             "url": "https://i.ytimg.com/an_webp/eJmutiITt6E/mqdefault_6s.webp?du=3000&sqp=CPicu6EG&rs=AOn4CLAfCd74qFCic4X3RO2DFewxKJ0PTA",
+#             "width": 320,
+#             "height": 180
+#           }
+#         ],
+#         "logAsMovingThumbnail": true
+#       },
+#       "enableHoveredLogging": true,
+#       "enableOverlay": true
+#     }
 #   }
 # }
