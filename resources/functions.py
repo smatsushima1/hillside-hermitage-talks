@@ -25,8 +25,9 @@ def scrape_hh():
     list_name = []
     list_date = []
     list_link = []
+    list_length = []
     # Save completed talk data to be referenced later
-    cdf = pd.read_csv('completed_results.csv')    
+    cdf = pd.read_csv('completed_results.csv')
     for i in videos:
         print('Working: ' + i['title']['runs'][0]['text'])
         # Save video ID
@@ -48,6 +49,7 @@ def scrape_hh():
         # Append data to appropriate lists
         list_name.append(i['title']['runs'][0]['text'])
         list_link.append(ylink)
+        list_length.append(i['lengthText']['simpleText'])
         # Start API search
         # https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=[YID]&key=[ACCESS_KEY]
         # %2C = ,
@@ -67,9 +69,11 @@ def scrape_hh():
                'NAME': list_name,
                'PUBLISHED_DATE': list_date,
                'LINK': list_link,
+               'LENGTH': list_length
               }
     df = pd.DataFrame(results)
     df.to_csv('results.csv')
+    df.to_excel('results.xlsx')
     print(df)
 
 
