@@ -1,6 +1,7 @@
 
 import os, scrapetube, json, requests, pandas as pd, csv
 from datetime import datetime
+from docx import Document
 
 
 def create_txt_files():
@@ -117,10 +118,25 @@ def number_check():
     print(x)
 
 
+# Convert all text files to docx
+def convert_docx():
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    dir_comp = '../completed'
+    dir_conv = '../to_convert'
+    for i in os.listdir(dir_conv):
+        doc = Document()
+        with open(dir_conv + '/' + i, 'r', encoding = 'utf-8') as tfile:
+            doc.add_paragraph(tfile.read())
+        # Save into docx
+        doc.save(dir_comp + '/' + i.replace('.txt', '.docx'))
+        # Move all txt files to completed directory
+        os.rename(dir_conv + '/' + i, dir_comp + '/' + i)
+
 #create_txt_files()
 #scrape_hh()
 #get_urls()
 #number_check()
+convert_docx()
 
 
 ################################################################################
