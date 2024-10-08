@@ -1,7 +1,8 @@
 
-import os, scrapetube, json, requests, pandas as pd, csv
+import os, scrapetube, json, requests, pandas as pd, csv, whisper
 from datetime import datetime
 from docx import Document
+from whisper.utils import get_writer
 
 
 def create_txt_files():
@@ -17,6 +18,7 @@ def create_txt_files():
         print('Created: ' + i)
 
 
+# Before running, insert API key from personal files
 def scrape_hh():
     # Change working directory to this file
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -62,13 +64,14 @@ def scrape_hh():
                          }
         response = requests.get(url_search, params = url_parameters)
         # Parse date, convert, then append to list; must be converted to json first
+        #print(json.dumps(response.json(), indent = 2))
         dtime = response.json()['items'][0]['snippet']['publishedAt']
         updated_dtime = datetime.strptime(dtime[:10], '%Y-%m-%d')
         list_date.append(updated_dtime.strftime('%m/%d/%Y'))
     # Save all results in dictionary
     results = {'TALK_ID': list_tid,
-               'NAME': list_name,
                'PUBLISHED_DATE': list_date,
+               'NAME': list_name,
                'LINK': list_link,
                'LENGTH': list_length
               }
@@ -132,11 +135,32 @@ def convert_docx():
         # Move all txt files to completed directory
         os.rename(dir_conv + '/' + i, dir_comp + '/' + i)
 
+
+# Crashes system, probably underpowered
+def convert_mp3():
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    dir_conv = '../to_convert'
+    for i in os.listdir(dir_conv):
+        file_name = str(i).replace(".mp3", ".txt")
+        print(file_name)
+        model = whisper.load_model("turbo")
+        audio = i
+        result = model.transcribe(i)
+        txt_writer = get_writer("txt", '../openai_whisper_raw_transcripts/')
+        txt_writer(result, audio)
+
+
+
+
+
+
+
 #create_txt_files()
 #scrape_hh()
 #get_urls()
 #number_check()
-convert_docx()
+#convert_docx()
+convert_mp3()
 
 
 ################################################################################
