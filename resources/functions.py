@@ -1,8 +1,9 @@
 
-import os, scrapetube, json, requests, pandas as pd, csv, whisper
+import os, scrapetube, json, requests, pandas as pd, csv
 from datetime import datetime
-from docx import Document
-from whisper.utils import get_writer
+from openai import OpenAI
+#from docx import Document
+#from whisper.utils import get_writer
 
 
 def create_txt_files():
@@ -122,18 +123,18 @@ def number_check():
 
 
 # Convert all text files to docx
-def convert_docx():
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    dir_comp = '../completed'
-    dir_conv = '../to_convert'
-    for i in os.listdir(dir_conv):
-        doc = Document()
-        with open(dir_conv + '/' + i, 'r', encoding = 'utf-8') as tfile:
-            doc.add_paragraph(tfile.read())
-        # Save into docx
-        doc.save(dir_comp + '/' + i.replace('.txt', '.docx'))
-        # Move all txt files to completed directory
-        os.rename(dir_conv + '/' + i, dir_comp + '/' + i)
+#def convert_docx():
+#    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+#    dir_comp = '../completed'
+#    dir_conv = '../to_convert'
+#    for i in os.listdir(dir_conv):
+#        doc = Document()
+#        with open(dir_conv + '/' + i, 'r', encoding = 'utf-8') as tfile:
+#            doc.add_paragraph(tfile.read())
+#        # Save into docx
+#        doc.save(dir_comp + '/' + i.replace('.txt', '.docx'))
+#        # Move all txt files to completed directory
+#        os.rename(dir_conv + '/' + i, dir_comp + '/' + i)
 
 
 # Crashes system, probably underpowered
@@ -150,7 +151,16 @@ def convert_mp3():
         txt_writer(result, audio)
 
 
-
+def convert_mp3_2():
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    api_key=os.environ.get("OPENAI_API_KEY")
+    client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+    audio_file = open("../to_convert/112hh.mp3", "rb")
+    transcription = client.audio.transcriptions.create(model = "whisper-1", 
+                                                       file = audio_file, 
+                                                       response_format = "text"
+    )
+    print(transcription.text)
 
 
 
@@ -160,7 +170,8 @@ def convert_mp3():
 #get_urls()
 #number_check()
 #convert_docx()
-convert_mp3()
+#convert_mp3()
+convert_mp3_2()
 
 
 ################################################################################
